@@ -74,6 +74,13 @@ $f3->route('GET /admin', function() {
     $GLOBALS['con']->admin();
 });
 
+$f3->route('GET|POST /quarantinetest', function () use ($f3) {
+
+    $GLOBALS['con']->quarantineTest($f3);
+
+
+
+});
 
 
 //Run fat free

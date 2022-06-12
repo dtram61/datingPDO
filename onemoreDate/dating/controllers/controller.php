@@ -424,4 +424,18 @@ class Controller
         echo $view->render('views/admin.html');
     }
 
+    function quarantineTest()
+    {
+        //Move quarantineTest data from POST to SESSION
+        var_dump ($_POST);
+
+        //Get the user data from the post array
+        $food = $_POST['food'];
+        $this->_f3->set('userFood', $food);
+
+
+        $view = new Template();
+        echo $view->render('views/quarantineTest.html');
+    }
+
 }
