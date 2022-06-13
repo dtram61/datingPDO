@@ -1,0 +1,48 @@
+
+<body>
+    <div class="container">
+        <h1>My Diner</h1>
+        <h2>Admin Page</h2>
+        <h3>All orders</h3>
+
+        <table>
+            <tr>
+                <th>Member ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>State</th>
+                <th>Seeking</th>
+                <th>Bio</th>
+                <th>Interests Indoor</th>
+                <th>Interests Outdoor</th>
+                <th>Premium</th>
+            </tr>
+        <repeat group="{{ @profiles }}" value="{{ @profile }}">
+            <tr>
+                <td> {{ @profile['member_id'] }}</td>
+                <td> {{ @profile['fname'] }}</td>
+                <td> {{ @profile['lname'] }}</td>
+                <td> {{ @profile['age'] }}</td>
+                <td> {{ @profile.gender }}</td>
+                <td> {{ @profile['phone'] }}</td>
+                <td> {{ @profile['email'] }}</td>
+                <td> {{ @profile['state'] }}</td>
+                <td> {{ @profile.seeking }}</td>
+                <td> {{ @profile.bio }}</td>
+                <td> {{ @profile.InterestsIndoor }}</td>
+                <td> {{ @profile.InterestsOutdoor}}</td>
+                <td> {{ @profile.premium }}</td>
+
+
+            </tr>
+        </repeat>
+        </table>
+
+        <a href="{{ @BASE }}">Return to Home</a>
+    </div>
+</body>
+</html>
